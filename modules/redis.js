@@ -16,8 +16,9 @@ client.auth('1428571a', function(reply) {
 
 })
 
-client.eval(fs.readFileSync('../pluskota.lua'), 0, function(err, res) {
+client.eval(fs.readFileSync('./pluskota.lua'), 0, function(err, res) {
   console.log("Srednia liczba wypozyczonych ksiazek w okresie jednego miesiaca: " + arguments[1]);
 });
+
 
 module.exports = redis;

@@ -16,6 +16,7 @@ app.set('port', (process.env.PORT || 5000));
 app.use('/', index);
 app.use('/about', about);
 app.use('/lenders', lenders);
+app.use(express.static(__dirname + '/stylesheets'));
 
 /** Common error handle **/
 app.use(function(req, res, next) {
