@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lenders</title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+<form method="post" action="/lenders/add">
+    <br> Imie i Nazwisko <br>
+    <input type="text" name="lender_data" value="<%= (!!locals.lenders) ? editValue : '' %>">
+    <br><input type="submit" value="Zapisz">
+</form>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About</title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+<table>
+    <thead>
+        <tr>
+            <th>Imie oraz nazwisko:</th>
+            <th colspan=2>Akcja</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% for(var i=0; i<groupsArray.length; i++) {%>
+        <tr>
+            <td><%= locals.groupsArray[i] %></td>
+            <td><a href="/lenders/<%= i %>/edit"> Edytuj </a></td>
+            <td><a href="/lenders/<%= i %>/remove"> Usun </a></td>
+        </tr>
+        <% } %>
+    </tbody>
+</table>
+<a href="/lenders/add">Dodaj</a><br><br>
+<a href="/">Powrót do strony głównej</a>
+</body>
+</html>
